@@ -1,24 +1,824 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Nm-pW-92a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Light</string>
+        </array>
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
+        <array key="Helvetica.ttc">
+            <string>Helvetica-BoldOblique</string>
+        </array>
+        <array key="HoeflerText.ttc">
+            <string>HoeflerText-Regular</string>
+        </array>
+        <array key="Kefa.ttf">
+            <string>Kefa-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--SDUapp-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sC-Zt-viz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k2-wW-S0Z">
+                                        <rect key="frame" x="107" y="27" width="160" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Sdu_logo"/>
+                                        <connections>
+                                            <segue destination="BFI-TM-2W8" kind="show" id="kfB-1u-YEw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdQ-X1-TZ9">
+                                <rect key="frame" x="0.0" y="219" width="375" height="448"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l8L-8p-q1L">
+                                        <rect key="frame" x="16" y="20" width="343" height="360"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-lx-SCX" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                <state key="normal" title="Faculties">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="q4n-ya-sNd" kind="show" id="1h7-55-BJv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-Qt-pSP" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="63.5" width="343" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <state key="normal" title="Clubs">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="aMo-wL-xyo" kind="show" id="5FK-Fv-zzH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPW-jF-jwt" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="126.5" width="343" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <state key="normal" title="News">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="ggA-uM-wMx" kind="show" id="NS5-kR-lax"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4La-Qf-p0D" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="190" width="343" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <state key="normal" title="Contacts">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="9rR-VZ-cy0" kind="show" id="d99-mW-8zX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-rv-mpO" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="253.5" width="343" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <state key="normal" title="Social networks">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="tnL-rA-5iB" kind="show" id="Yhi-8X-dVw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-if-3MV" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="316.5" width="343" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                <state key="normal" title="Gallery">
+                                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="21.25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="TcG-RN-MmG" kind="show" id="HMc-Wv-2Ht"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="360" id="CdQ-ar-ZZ8"/>
+                                            <constraint firstAttribute="width" constant="343" id="EVq-cS-Uco"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="l8L-8p-q1L" firstAttribute="top" secondItem="BdQ-X1-TZ9" secondAttribute="top" constant="20" id="eSk-Sf-1kZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="l8L-8p-q1L" secondAttribute="trailing" constant="16" id="fjf-Bn-m5R"/>
+                                    <constraint firstItem="l8L-8p-q1L" firstAttribute="leading" secondItem="BdQ-X1-TZ9" secondAttribute="leading" constant="16" id="n6m-o0-HkI"/>
+                                    <constraint firstAttribute="bottom" secondItem="l8L-8p-q1L" secondAttribute="bottom" constant="68" id="rDK-GM-ewZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BdQ-X1-TZ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2DM-u9-bjE"/>
+                            <constraint firstItem="BdQ-X1-TZ9" firstAttribute="trailing" secondItem="5sC-Zt-viz" secondAttribute="trailing" id="9ds-WV-jqd"/>
+                            <constraint firstItem="BdQ-X1-TZ9" firstAttribute="top" secondItem="5sC-Zt-viz" secondAttribute="bottom" id="DXO-EL-UtZ"/>
+                            <constraint firstItem="5sC-Zt-viz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JcX-Bs-0Vi"/>
+                            <constraint firstItem="BdQ-X1-TZ9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MC6-wE-0yf"/>
+                            <constraint firstItem="BdQ-X1-TZ9" firstAttribute="leading" secondItem="5sC-Zt-viz" secondAttribute="leading" id="qp7-h0-XXB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="SDUapp" id="wXq-Tu-zof"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="260" y="133.5832083958021"/>
+        </scene>
+        <!--SDU Info-->
+        <scene sceneID="f98-LQ-fJP">
+            <objects>
+                <viewController title="SDU Info" id="BFI-TM-2W8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RmD-R2-wod">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sduinfo" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-Y6-gNc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4T-Oh-90p">
+                                <rect key="frame" x="16" y="224" width="343" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Süleyman Demirel University is a private university in Kaskelen, Almaty, Kazakhstan. It is named after Süleyman Demirel, the former prime minister and president of Turkey.
+
+The university was established in 1996, by the initiatives of the president of Kazakhstan, Nursultan Nazarbayev, and the former president of Turkey, Suleyman Demirel.  Campus
+SDU has been using its “Smart Campus” since the academic year of 2011-2012. The campus was specially built with the capacity for accommodating more than 7000 students. There are eight faculties; courses are instructed in English and Kazakh languages. The new campus offers an excellent learning environment with its 16 lecture theatres, 120 auditoriums, 3 research centers, 8 computer labs, 2 internet cafés, conference hall, stadium, gym, medical center, 2 halls of residence, and 2 comprehensive libraries that are based on electronic cataloging system and search engine. Additionally, the campus houses 3 canteens and coffee bars. At the moment, some parts of the campus are under construction.  SDU offers full-time degree programmes.
+
+Undergraduate degrees are taught at four faculties, which are divided into specific professions. The university building and campus are being expanded, which means other areas are expected to be added.
+
+Master’s degrees can be obtained at SDU in eight areas and are instructed in English. These courses are designed fully in concord with the real loads of modern society.
+
+Moreover, SDU provide opportunities to everyone who wants to conduct research at some specific PhD programmes.
+
+Advanced language courses are offered for all at the SDU Language School, who are intending to learn English and Turkish for academic and business purposes. Generally, almost all interested people can attend. Furthermore, specially designed IELTS and TOEFL tests are taught and trained by highly qualified language instructors.</string>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Qhe-0i-5qr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzu-fl-NsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="134"/>
+        </scene>
+        <!--Show View Controller-->
+        <scene sceneID="RiL-J4-wGC">
+            <objects>
+                <viewController storyboardIdentifier="detailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r7f-1L-Ndo" customClass="showViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggV-KH-jE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owD-2L-8ml">
+                                <rect key="frame" x="0.0" y="210" width="375" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Z7-uy-lgB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="owD-2L-8ml" id="UJd-ug-ITZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pw-4a-pRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1212" y="843.32833583208401"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="0Ea-RL-uzL">
+            <objects>
+                <viewController id="TcG-RN-MmG" customClass="GalleryViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PwS-tq-yaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-GQ-eTr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="PME-jH-Wx6">
+                                    <size key="itemSize" width="124" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCellG" id="Qkh-pT-raW" customClass="GalleryCollectionViewCell" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="124" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfD-GS-nCC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="mfD-GS-nCC" id="uVp-s7-1yV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TcG-RN-MmG" id="NHz-5t-9ky"/>
+                                    <outlet property="delegate" destination="TcG-RN-MmG" id="yxm-Qi-Q8u"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3ut-Eq-OdG"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Gef-GQ-eTr" id="GH3-K6-tyU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxX-lh-f8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="857.72113943028489"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="IbV-gK-jne">
+            <objects>
+                <viewController title="Contacts" id="9rR-VZ-cy0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MKy-ce-rhr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="45" translatesAutoresizingMaskIntoConstraints="NO" id="SR9-cr-1kZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="451" translatesAutoresizingMaskIntoConstraints="NO" id="Vum-9y-uwh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mans" translatesAutoresizingMaskIntoConstraints="NO" id="dch-5c-8UU">
+                                <rect key="frame" x="103" y="575" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijK-bH-KKK">
+                                <rect key="frame" x="148" y="531" width="227" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-ku-f3D">
+                                <rect key="frame" x="164" y="571" width="179" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">1/1 Abylai Khan Street
+Kaskelen, Almaty
+Kazakhstan, 040900
+Tel: +7 727 307 95 65,69
+Fax: +7 727 307 95 58</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ybc-NM-q1t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xow-fN-4Ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="857.72113943028489"/>
+        </scene>
+        <!--Social networks-->
+        <scene sceneID="tvE-EC-9dn">
+            <objects>
+                <viewController title="Social networks" id="tnL-rA-5iB" customClass="SocialNetworksViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydV-iF-vau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvC-t5-sPz">
+                                <rect key="frame" x="25" y="84" width="325" height="392"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvg-Sq-C7E" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="30" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button" image="fb"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink2:" destination="tnL-rA-5iB" eventType="touchUpInside" id="DJF-XM-d58"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flx-qj-KsV" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="30" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="vk"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink1:" destination="tnL-rA-5iB" eventType="touchUpInside" id="1Ka-jn-jG0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8i-7X-80w" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="231" y="30" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="twit"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink3:" destination="tnL-rA-5iB" eventType="touchUpInside" id="iVX-xD-vMi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbG-Pe-P1w" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="273" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="insta"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink4:" destination="tnL-rA-5iB" eventType="touchUpInside" id="13d-sm-RbU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgp-ok-vOZ" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="273" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="yout"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink5:" destination="tnL-rA-5iB" eventType="touchUpInside" id="lQe-dc-cxu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssV-zl-XUZ" customClass="RoundButton" customModule="SDU_app" customModuleProvider="target">
+                                        <rect key="frame" x="231" y="273" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="ask"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickLink6:" destination="tnL-rA-5iB" eventType="touchUpInside" id="aGB-zo-75G"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@SDUKZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-PJ-0GR">
+                                        <rect key="frame" x="33" y="140" width="261" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="40"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-LW-jvY">
+                                <rect key="frame" x="25" y="535" width="325" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <state key="normal" title="https://sdu.edu.kz">
+                                    <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sduLink:" destination="tnL-rA-5iB" eventType="touchUpInside" id="pJN-vd-BYp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zvC-t5-sPz" firstAttribute="leading" secondItem="awK-YE-gqW" secondAttribute="leading" constant="25" id="9gq-Xa-Wgm"/>
+                            <constraint firstItem="awK-YE-gqW" firstAttribute="trailing" secondItem="zvC-t5-sPz" secondAttribute="trailing" constant="25" id="Eb6-1P-FiI"/>
+                            <constraint firstItem="zvC-t5-sPz" firstAttribute="top" secondItem="awK-YE-gqW" secondAttribute="top" constant="20" id="gS8-Cr-EKd"/>
+                            <constraint firstItem="awK-YE-gqW" firstAttribute="bottom" secondItem="zvC-t5-sPz" secondAttribute="bottom" constant="191" id="mMj-gd-5mU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="awK-YE-gqW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkU-Ph-PYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="857.72113943028489"/>
+        </scene>
+        <!--Faculties-->
+        <scene sceneID="zQk-gg-Cz2">
+            <objects>
+                <tableViewController title="Faculties" id="q4n-ya-sNd" customClass="FacultiesTableViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pj6-VB-wWv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faculCell" rowHeight="225" id="Qg4-fm-QYa" customClass="FacultiesTableViewCell" customModule="SDU_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="225"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qg4-fm-QYa" id="RKr-Pg-uAY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lists_background" translatesAutoresizingMaskIntoConstraints="NO" id="a6r-p3-oJg">
+                                            <rect key="frame" x="25" y="16" width="325" height="183"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="325" id="6Io-sI-NWD"/>
+                                                <constraint firstAttribute="height" constant="183" id="7rR-u6-6at"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLz-Z8-lfi">
+                                            <rect key="frame" x="143" y="30" width="201" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="201" id="i83-WZ-p7a"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNr-wn-dKt">
+                                            <rect key="frame" x="25" y="141" width="325" height="58"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bcR-RY-JN5">
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V40-24-2e4">
+                                                        <rect key="frame" x="8" y="0.0" width="309" height="58"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="V40-24-2e4" secondAttribute="bottom" id="3vb-tR-ZuV"/>
+                                                    <constraint firstItem="V40-24-2e4" firstAttribute="top" secondItem="bcR-RY-JN5" secondAttribute="top" id="5DO-V3-Oh6"/>
+                                                    <constraint firstItem="V40-24-2e4" firstAttribute="leading" secondItem="bcR-RY-JN5" secondAttribute="leading" constant="8" id="g5T-nP-yiU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="V40-24-2e4" secondAttribute="trailing" constant="8" id="xce-C0-z7K"/>
+                                                </constraints>
+                                            </view>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="325" id="3wG-fS-hts"/>
+                                                <constraint firstAttribute="height" constant="58" id="D3p-FO-IL7"/>
+                                            </constraints>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymr-Zj-2wQ">
+                                            <rect key="frame" x="34" y="30" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="VKd-qS-QiA"/>
+                                                <constraint firstAttribute="width" constant="90" id="xap-Yl-Icr"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="a6r-p3-oJg" firstAttribute="leading" secondItem="RKr-Pg-uAY" secondAttribute="leadingMargin" constant="9" id="4gd-YM-ybb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="a6r-p3-oJg" secondAttribute="trailing" constant="9" id="7zn-Ef-fjO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SNr-wn-dKt" secondAttribute="bottom" constant="15" id="Ach-sg-yPt"/>
+                                        <constraint firstItem="sLz-Z8-lfi" firstAttribute="top" secondItem="RKr-Pg-uAY" secondAttribute="topMargin" constant="19" id="Isg-QC-S65"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sLz-Z8-lfi" secondAttribute="trailing" constant="15" id="KCz-zG-yWB"/>
+                                        <constraint firstItem="ymr-Zj-2wQ" firstAttribute="leading" secondItem="RKr-Pg-uAY" secondAttribute="leadingMargin" constant="18" id="QNd-IZ-aL6"/>
+                                        <constraint firstItem="sLz-Z8-lfi" firstAttribute="leading" secondItem="ymr-Zj-2wQ" secondAttribute="trailing" constant="19" id="Sjc-WL-26P"/>
+                                        <constraint firstItem="SNr-wn-dKt" firstAttribute="leading" secondItem="RKr-Pg-uAY" secondAttribute="leadingMargin" constant="9" id="UOT-IX-qVl"/>
+                                        <constraint firstItem="ymr-Zj-2wQ" firstAttribute="top" secondItem="RKr-Pg-uAY" secondAttribute="topMargin" constant="19" id="ZOT-fj-yp6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SNr-wn-dKt" secondAttribute="trailing" constant="9" id="Ztu-XA-zFc"/>
+                                        <constraint firstItem="SNr-wn-dKt" firstAttribute="top" secondItem="ymr-Zj-2wQ" secondAttribute="bottom" constant="21" id="aIq-JN-sEm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="a6r-p3-oJg" secondAttribute="bottom" constant="15" id="dms-fp-9qO"/>
+                                        <constraint firstItem="a6r-p3-oJg" firstAttribute="top" secondItem="RKr-Pg-uAY" secondAttribute="topMargin" constant="5" id="w6Y-nl-asO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="faculties_image" destination="ymr-Zj-2wQ" id="E7f-K9-xR5"/>
+                                    <outlet property="faculties_info" destination="sLz-Z8-lfi" id="9qk-fR-v60"/>
+                                    <outlet property="faculties_name" destination="V40-24-2e4" id="KcK-vN-cSb"/>
+                                    <outlet property="faculties_view" destination="a6r-p3-oJg" id="gfv-i0-fc3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q4n-ya-sNd" id="zsx-S9-HPg"/>
+                            <outlet property="delegate" destination="q4n-ya-sNd" id="4Qp-wK-wFX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZR-jt-g89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="-565.36731634182911"/>
+        </scene>
+        <!--Clubs-->
+        <scene sceneID="TRZ-KI-r9U">
+            <objects>
+                <tableViewController title="Clubs" id="aMo-wL-xyo" customClass="ClubTableViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BYE-GL-ssK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clubCell" rowHeight="107" id="jGe-i2-hLl" customClass="MyTableViewCell" customModule="SDU_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jGe-i2-hLl" id="m3c-Jq-jU0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-BH-TGy">
+                                            <rect key="frame" x="25" y="7" width="325" height="90"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EtR-bZ-lyt">
+                                                    <rect key="frame" x="8" y="5" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Z2g-cq-pYx"/>
+                                                        <constraint firstAttribute="height" constant="80" id="h6s-Wy-RGl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhz-Rf-NFb">
+                                                    <rect key="frame" x="96" y="37" width="221" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="221" id="PnH-r9-1wP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSz-Rx-RhF">
+                                                    <rect key="frame" x="96" y="8" width="221" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.23921568627450979" green="0.73725490196078436" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="EtR-bZ-lyt" firstAttribute="top" secondItem="Yd6-BH-TGy" secondAttribute="top" constant="5" id="2Yf-FU-NpM"/>
+                                                <constraint firstItem="GSz-Rx-RhF" firstAttribute="top" secondItem="Yd6-BH-TGy" secondAttribute="top" constant="8" id="6Wy-vN-OJV"/>
+                                                <constraint firstItem="Nhz-Rf-NFb" firstAttribute="leading" secondItem="EtR-bZ-lyt" secondAttribute="trailing" constant="8" id="DbA-jP-AnE"/>
+                                                <constraint firstItem="GSz-Rx-RhF" firstAttribute="leading" secondItem="EtR-bZ-lyt" secondAttribute="trailing" constant="8" id="OmO-9G-EUf"/>
+                                                <constraint firstAttribute="bottom" secondItem="EtR-bZ-lyt" secondAttribute="bottom" constant="5" id="TAp-ex-zHq"/>
+                                                <constraint firstItem="Nhz-Rf-NFb" firstAttribute="top" secondItem="GSz-Rx-RhF" secondAttribute="bottom" constant="8" id="bIk-ia-Sy6"/>
+                                                <constraint firstAttribute="trailing" secondItem="GSz-Rx-RhF" secondAttribute="trailing" constant="8" id="dFw-AO-ikm"/>
+                                                <constraint firstItem="EtR-bZ-lyt" firstAttribute="leading" secondItem="Yd6-BH-TGy" secondAttribute="leading" constant="8" id="iIF-uc-9TL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nhz-Rf-NFb" secondAttribute="trailing" constant="8" id="onM-BB-Q9v"/>
+                                                <constraint firstAttribute="height" constant="90" id="u0D-cC-VQs"/>
+                                                <constraint firstAttribute="width" constant="325" id="ur0-kI-RUX"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Yd6-BH-TGy" firstAttribute="top" secondItem="m3c-Jq-jU0" secondAttribute="top" constant="7" id="8aH-8d-bes"/>
+                                        <constraint firstAttribute="bottom" secondItem="Yd6-BH-TGy" secondAttribute="bottom" constant="10" id="hBU-yT-5cX"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yd6-BH-TGy" secondAttribute="trailing" constant="25" id="hxC-0x-wYb"/>
+                                        <constraint firstItem="Yd6-BH-TGy" firstAttribute="leading" secondItem="m3c-Jq-jU0" secondAttribute="leading" constant="25" id="lM0-ZY-alL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="club_image" destination="EtR-bZ-lyt" id="E4Y-co-11c"/>
+                                    <outlet property="club_info" destination="Nhz-Rf-NFb" id="TBO-uV-SAF"/>
+                                    <outlet property="club_name" destination="GSz-Rx-RhF" id="tBx-1Z-XsL"/>
+                                    <outlet property="club_view" destination="Yd6-BH-TGy" id="EQb-gq-8VD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aMo-wL-xyo" id="X84-To-ROG"/>
+                            <outlet property="delegate" destination="aMo-wL-xyo" id="rru-9t-jvo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0E-Tr-uOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-565.36731634182911"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="ZgW-1f-uWL">
+            <objects>
+                <tableViewController title="News" id="ggA-uM-wMx" customClass="NewsTableViewController" customModule="SDU_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uck-HG-toF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="343" id="Jga-SM-OgG" customClass="NewsTableViewCell" customModule="SDU_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="343"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jga-SM-OgG" id="7lc-23-9yf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="342.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oty-fJ-s5g">
+                                            <rect key="frame" x="231" y="20" width="118" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="68" id="IHs-KU-pVu"/>
+                                                <constraint firstAttribute="width" constant="118" id="nh8-Xp-MMm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7d-Oz-Asp">
+                                            <rect key="frame" x="26" y="20" width="192" height="26.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="192" id="8FQ-nI-j5P"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz1-RK-QXu">
+                                            <rect key="frame" x="26" y="61.5" width="323" height="260.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="323" id="Hz5-BJ-n9Z"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="hz1-RK-QXu" firstAttribute="top" secondItem="w7d-Oz-Asp" secondAttribute="bottom" constant="15" id="0uN-dj-cJt"/>
+                                        <constraint firstItem="hz1-RK-QXu" firstAttribute="leading" secondItem="7lc-23-9yf" secondAttribute="leadingMargin" constant="10" id="8Zg-or-ZUM"/>
+                                        <constraint firstItem="w7d-Oz-Asp" firstAttribute="top" secondItem="7lc-23-9yf" secondAttribute="topMargin" constant="9" id="EMN-o1-0V4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="hz1-RK-QXu" secondAttribute="trailing" constant="10" id="WB0-db-9WL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Oty-fJ-s5g" secondAttribute="trailing" constant="10" id="WKp-XJ-NF6"/>
+                                        <constraint firstItem="hz1-RK-QXu" firstAttribute="top" secondItem="w7d-Oz-Asp" secondAttribute="bottom" constant="15" id="daa-QS-b5s"/>
+                                        <constraint firstItem="Oty-fJ-s5g" firstAttribute="leading" secondItem="w7d-Oz-Asp" secondAttribute="trailing" constant="13" id="kfd-cy-YCT"/>
+                                        <constraint firstItem="Oty-fJ-s5g" firstAttribute="leading" secondItem="w7d-Oz-Asp" secondAttribute="trailing" constant="13" id="lbF-ci-QeB"/>
+                                        <constraint firstItem="w7d-Oz-Asp" firstAttribute="leading" secondItem="7lc-23-9yf" secondAttribute="leadingMargin" constant="10" id="o4T-jr-aR3"/>
+                                        <constraint firstItem="Oty-fJ-s5g" firstAttribute="top" secondItem="7lc-23-9yf" secondAttribute="topMargin" constant="9" id="oQM-uV-DaE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hz1-RK-QXu" secondAttribute="bottom" constant="10" id="yrp-JO-kDy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="news_image" destination="Oty-fJ-s5g" id="h8x-Ae-2Om"/>
+                                    <outlet property="news_title" destination="w7d-Oz-Asp" id="Ag7-eg-rgY"/>
+                                    <outlet property="news_txt" destination="hz1-RK-QXu" id="4lH-z9-Jnm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ggA-uM-wMx" id="xEP-sD-tO3"/>
+                            <outlet property="delegate" destination="ggA-uM-wMx" id="Hnk-Y5-QXc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4L-wR-g9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="-565.36731634182911"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sao-ri-GA0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Nm-pW-92a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EC7-7d-iud">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tfr-IY-6rX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88P-RR-5iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="45" width="400" height="400"/>
+        <image name="451" width="1024" height="682"/>
+        <image name="Sdu_logo" width="1200" height="782"/>
+        <image name="ask" width="140" height="140"/>
+        <image name="fb" width="128" height="128"/>
+        <image name="insta" width="128" height="128"/>
+        <image name="lists_background" width="960" height="451"/>
+        <image name="mans" width="512" height="512"/>
+        <image name="sduinfo" width="700" height="300"/>
+        <image name="twit" width="128" height="128"/>
+        <image name="vk" width="256" height="256"/>
+        <image name="yout" width="128" height="128"/>
+    </resources>
 </document>

@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F28475B204F1FB300D66E23 /* ClubsInformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F28475A204F1FB300D66E23 /* ClubsInformViewController.swift */; };
+		7F2896B2204EB67F00B356C2 /* Faculties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2896B1204EB67F00B356C2 /* Faculties.swift */; };
+		7F2896B4204EB73600B356C2 /* FacultiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2896B3204EB73600B356C2 /* FacultiesTableViewCell.swift */; };
+		7F2896B6204EB78300B356C2 /* FacultiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2896B5204EB78300B356C2 /* FacultiesTableViewController.swift */; };
+		7F2ABED7204D1A9D00FD15E9 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2ABED6204D1A9D00FD15E9 /* NewsTableViewCell.swift */; };
+		7F2ABED9204D1ADB00FD15E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2ABED8204D1ADB00FD15E9 /* News.swift */; };
+		7F2ABEDB204D1C6A00FD15E9 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2ABEDA204D1C6A00FD15E9 /* NewsTableViewController.swift */; };
+		7FB22927204F9CA500D69EA4 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB22926204F9CA500D69EA4 /* GalleryCollectionViewCell.swift */; };
+		7FB22929204F9D3B00D69EA4 /* SduImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB22928204F9D3B00D69EA4 /* SduImage.swift */; };
+		7FB2292D204F9FF300D69EA4 /* showViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2292C204F9FF300D69EA4 /* showViewController.swift */; };
+		7FB2292F204FA3AE00D69EA4 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2292E204FA3AE00D69EA4 /* GalleryViewController.swift */; };
+		7FB22931204FAD6700D69EA4 /* SocialNetworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB22930204FAD6700D69EA4 /* SocialNetworksViewController.swift */; };
 		7FFA31AD204BF8B10049CB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31AC204BF8B10049CB0B /* AppDelegate.swift */; };
-		7FFA31AF204BF8B10049CB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31AE204BF8B10049CB0B /* ViewController.swift */; };
 		7FFA31B2204BF8B10049CB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFA31B0204BF8B10049CB0B /* Main.storyboard */; };
 		7FFA31B4204BF8B10049CB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FFA31B3204BF8B10049CB0B /* Assets.xcassets */; };
 		7FFA31B7204BF8B10049CB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFA31B5204BF8B10049CB0B /* LaunchScreen.storyboard */; };
 		7FFA31C2204BF8B10049CB0B /* SDU_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31C1204BF8B10049CB0B /* SDU_appTests.swift */; };
 		7FFA31CD204BF8B20049CB0B /* SDU_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31CC204BF8B20049CB0B /* SDU_appUITests.swift */; };
+		7FFA31DE204C07D40049CB0B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31DD204C07D40049CB0B /* RoundButton.swift */; };
+		7FFA31E0204C206F0049CB0B /* ClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31DF204C206F0049CB0B /* ClubTableViewController.swift */; };
+		7FFA31E4204C20E30049CB0B /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31E3204C20E30049CB0B /* MyTableViewCell.swift */; };
+		7FFA31E7204C21580049CB0B /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA31E6204C21580049CB0B /* Clubs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F28475A204F1FB300D66E23 /* ClubsInformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsInformViewController.swift; sourceTree = "<group>"; };
+		7F2896B1204EB67F00B356C2 /* Faculties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculties.swift; sourceTree = "<group>"; };
+		7F2896B3204EB73600B356C2 /* FacultiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultiesTableViewCell.swift; sourceTree = "<group>"; };
+		7F2896B5204EB78300B356C2 /* FacultiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultiesTableViewController.swift; sourceTree = "<group>"; };
+		7F2ABED6204D1A9D00FD15E9 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		7F2ABED8204D1ADB00FD15E9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		7F2ABEDA204D1C6A00FD15E9 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		7FB22926204F9CA500D69EA4 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7FB22928204F9D3B00D69EA4 /* SduImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SduImage.swift; sourceTree = "<group>"; };
+		7FB2292C204F9FF300D69EA4 /* showViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showViewController.swift; sourceTree = "<group>"; };
+		7FB2292E204FA3AE00D69EA4 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		7FB22930204FAD6700D69EA4 /* SocialNetworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksViewController.swift; sourceTree = "<group>"; };
 		7FFA31A9204BF8B10049CB0B /* SDU-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDU-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFA31AC204BF8B10049CB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FFA31AE204BF8B10049CB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FFA31B1204BF8B10049CB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FFA31B3204BF8B10049CB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FFA31B6204BF8B10049CB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +73,10 @@
 		7FFA31C8204BF8B10049CB0B /* SDU-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SDU-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFA31CC204BF8B20049CB0B /* SDU_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDU_appUITests.swift; sourceTree = "<group>"; };
 		7FFA31CE204BF8B20049CB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FFA31DD204C07D40049CB0B /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		7FFA31DF204C206F0049CB0B /* ClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewController.swift; sourceTree = "<group>"; };
+		7FFA31E3204C20E30049CB0B /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		7FFA31E6204C21580049CB0B /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +127,11 @@
 		7FFA31AB204BF8B10049CB0B /* SDU-app */ = {
 			isa = PBXGroup;
 			children = (
+				7FFA31E5204C211B0049CB0B /* Models */,
+				7FFA31E2204C20B60049CB0B /* Cells */,
+				7FFA31E1204C20940049CB0B /* ViewControllers */,
+				7FFA31DC204C07700049CB0B /* Service */,
 				7FFA31AC204BF8B10049CB0B /* AppDelegate.swift */,
-				7FFA31AE204BF8B10049CB0B /* ViewController.swift */,
 				7FFA31B0204BF8B10049CB0B /* Main.storyboard */,
 				7FFA31B3204BF8B10049CB0B /* Assets.xcassets */,
 				7FFA31B5204BF8B10049CB0B /* LaunchScreen.storyboard */,
@@ -123,6 +156,50 @@
 				7FFA31CE204BF8B20049CB0B /* Info.plist */,
 			);
 			path = "SDU-appUITests";
+			sourceTree = "<group>";
+		};
+		7FFA31DC204C07700049CB0B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA31DD204C07D40049CB0B /* RoundButton.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7FFA31E1204C20940049CB0B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA31DF204C206F0049CB0B /* ClubTableViewController.swift */,
+				7F2ABEDA204D1C6A00FD15E9 /* NewsTableViewController.swift */,
+				7F2896B5204EB78300B356C2 /* FacultiesTableViewController.swift */,
+				7F28475A204F1FB300D66E23 /* ClubsInformViewController.swift */,
+				7FB2292C204F9FF300D69EA4 /* showViewController.swift */,
+				7FB2292E204FA3AE00D69EA4 /* GalleryViewController.swift */,
+				7FB22930204FAD6700D69EA4 /* SocialNetworksViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7FFA31E2204C20B60049CB0B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA31E3204C20E30049CB0B /* MyTableViewCell.swift */,
+				7F2ABED6204D1A9D00FD15E9 /* NewsTableViewCell.swift */,
+				7F2896B3204EB73600B356C2 /* FacultiesTableViewCell.swift */,
+				7FB22926204F9CA500D69EA4 /* GalleryCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7FFA31E5204C211B0049CB0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA31E6204C21580049CB0B /* Clubs.swift */,
+				7F2ABED8204D1ADB00FD15E9 /* News.swift */,
+				7F2896B1204EB67F00B356C2 /* Faculties.swift */,
+				7FB22928204F9D3B00D69EA4 /* SduImage.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +336,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FFA31AF204BF8B10049CB0B /* ViewController.swift in Sources */,
+				7FFA31DE204C07D40049CB0B /* RoundButton.swift in Sources */,
+				7F28475B204F1FB300D66E23 /* ClubsInformViewController.swift in Sources */,
+				7F2896B4204EB73600B356C2 /* FacultiesTableViewCell.swift in Sources */,
+				7FB2292D204F9FF300D69EA4 /* showViewController.swift in Sources */,
+				7F2ABED9204D1ADB00FD15E9 /* News.swift in Sources */,
+				7FB2292F204FA3AE00D69EA4 /* GalleryViewController.swift in Sources */,
+				7F2ABED7204D1A9D00FD15E9 /* NewsTableViewCell.swift in Sources */,
+				7FFA31E0204C206F0049CB0B /* ClubTableViewController.swift in Sources */,
+				7F2ABEDB204D1C6A00FD15E9 /* NewsTableViewController.swift in Sources */,
+				7F2896B2204EB67F00B356C2 /* Faculties.swift in Sources */,
+				7FFA31E4204C20E30049CB0B /* MyTableViewCell.swift in Sources */,
+				7FB22931204FAD6700D69EA4 /* SocialNetworksViewController.swift in Sources */,
 				7FFA31AD204BF8B10049CB0B /* AppDelegate.swift in Sources */,
+				7F2896B6204EB78300B356C2 /* FacultiesTableViewController.swift in Sources */,
+				7FB22927204F9CA500D69EA4 /* GalleryCollectionViewCell.swift in Sources */,
+				7FB22929204F9D3B00D69EA4 /* SduImage.swift in Sources */,
+				7FFA31E7204C21580049CB0B /* Clubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
